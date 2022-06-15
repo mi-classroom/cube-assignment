@@ -1,0 +1,48 @@
+.main-grid {
+  --column-count: 6;
+}
+
+.main-grid > * {
+  display: grid;
+  grid-column: 1/-1;
+
+  @include basegrid;
+}
+
+.main-grid > * > * {
+  grid-column: 2 / -2;
+}
+
+@media (min-width: 650px) {
+  .even-columns {
+    margin-bottom: var(--xl);
+  }
+
+  .even-columns > * {
+    grid-column: span var(--col-width);
+  }
+
+  .even-columns > *:first-child {
+    grid-column: var(--col-start, 2) / span var(--col-width);
+  }
+
+  .even-columns > *:last-child {
+    grid-column: span var(--col-width) / calc(var(--col-start, 2) * -1);
+  }
+
+  .two-columns {
+    --col-width: calc(var(--column-count) / 3);
+  }
+
+  .three-columns {
+    --col-width: calc(var(--column-count) / 2);
+  }
+
+  .uneven-four-columns {
+    grid-column: var(--col-start, 1) / span 6;
+  }
+
+  .full-width {
+    grid-column: 1/ -1;
+  }
+}

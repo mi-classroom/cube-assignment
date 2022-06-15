@@ -1,0 +1,5 @@
+@mixin basegrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(var(--m), 1fr) repeat(var(--column-count), minmax(0, 12rem)) minmax(var(--m), 1fr);
+}
