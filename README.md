@@ -4,8 +4,12 @@
 
 ## Funktionen
 
-`npm install` - installiert die erforderlichen Abhängigkeiten  
-`npm run lint` - startet stylelint. 
-`npm run lint:fix` - startet stylelint und korrigiert die Fehler, sofern möglich  
-`npm run dev:css` - kompiliert SCSS zu CSS   
+`npm install` - installiert die erforderlichen Abhängigkeiten
+
+`npm run lint` - startet stylelint
+
+`npm run lint:fix` - startet stylelint und korrigiert die Fehler, sofern möglich
+
+`npm run dev:css` - kompiliert SCSS zu CSS
+
 `npm run watch:sass` - startet den Watchmode für den SASS Compiler
