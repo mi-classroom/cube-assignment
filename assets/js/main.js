@@ -1,8 +1,8 @@
 const switcherElement = document.querySelector('[data-js-layout-switch]');
 const switcherViewElements = document.querySelectorAll('[data-js-layout-view]')
 switcherElement.addEventListener('click', function(e) {
+  switcherElement.classList.toggle('is-active');
   switcherViewElements.forEach((element) => {
-    switcherElement.classList.toggle('is-active');
     if (element.hasAttribute('data-state')) {
 
       element.removeAttribute('data-state');
@@ -12,4 +12,4 @@ switcherElement.addEventListener('click', function(e) {
     element.setAttribute('data-state', 'rows');
     return true;
   });
-})
+});

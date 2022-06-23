@@ -102,6 +102,14 @@
   background-color: var(--darkest);
 }
 
+/* Unstyled Button
+###########################################################################  */
+.unstyled-button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 /* Teaser
 ###########################################################################  */
 
@@ -159,4 +167,20 @@
     grid-row: 1 / 2;
     mix-blend-mode: darken;
   }
+}
+
+/* View Switcher
+###########################################################################  */
+.view-switcher {
+  margin-right: 0;
+  margin-bottom: var(--s);
+  cursor: pointer;
+  grid-column: 7 / 8;
+  justify-self: end;
+  transform: rotate(90deg);
+  transition: transform var(--tr-fast);
+}
+
+.view-switcher.is-active {
+  transform: rotate(0deg);
 }
